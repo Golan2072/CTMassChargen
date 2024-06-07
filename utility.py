@@ -1,6 +1,6 @@
 # utility.py
 # A module with various useful functions by Omer Golan-Joel
-# v3.1 - July 19th, 2020
+# v3.2 - June 7th, 2024
 # open source under the Creative Commons Zero 1.0 License
 # contact me at golan2072@gmail.com
 
@@ -99,3 +99,21 @@ def list_stringer(input_list):
     for item in input_list:
         output_list.append(str(item))
     return ' '.join(output_list)
+
+
+def menu(title, *argv):
+    print ("===============================")
+    print (title)
+    print ("===============================")
+    for arg in argv:
+        print(arg)
+    print ("-------------------------------")
+    menu_loop = True
+    while menu_loop:
+        choice = input("Please input your selected option number and press Enter:")
+        if int(choice) in range (0, len(argv)+1):
+            return int(choice)
+            menu_loop = False
+        else:
+            print("Invalid choice, please choose again")
+    
