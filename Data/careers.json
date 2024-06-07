@@ -1,0 +1,469 @@
+{
+    "Navy": {
+        "name": "Navy",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 8,
+        "enlistment+1": "INT8",
+        "enlistment+2": "EDU9",
+        "draft": 1,
+        "survival": 5,
+        "survival+2": "INT7",
+        "commission": 10,
+        "commission+1": "SOC9",
+        "promotion": 8,
+        "promotion+1": "EDU8",
+        "reenlist": 6,
+        "autoskills": {
+            "5": "SOC1",
+            "6": "SOC1"
+        },
+        "ranks": {
+            "0": "Starman",
+            "1": "Ensign",
+            "2": "Lieutenant",
+            "3": "Lt. Commander",
+            "4": "Commander",
+            "5": "Captain",
+            "6": "Admiral"
+        },
+        "benefits": [
+            "Low Passage",
+            "INT1",
+            "EDU2",
+            "Blade",
+            "Traveller's Aid",
+            "High Passage",
+            "SOC2"
+        ],
+        "cash": [
+            1000,
+            5000,
+            5000,
+            10000,
+            20000,
+            50000,
+            50000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "INT1",
+            "EDU1",
+            "SOC1"
+        ],
+        "service": [
+            "Ship's Boat",
+            "Vacc Suit",
+            "Forward Observer",
+            "Gunnery",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced": [
+            "Vacc Suit",
+            "Mechanical",
+            "Electronics",
+            "Engineering",
+            "Gunnery",
+            "Jack-o-T"
+        ],
+        "advanced8": [
+            "Medical",
+            "Navigation",
+            "Engineering",
+            "Computer",
+            "Pilot",
+            "Admin"
+        ]
+    },
+    "Marines": {
+        "name": "Marines",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 9,
+        "enlistment+1": "INT8",
+        "enlistment+2": "STR8",
+        "draft": 2,
+        "survival": 6,
+        "survival+2": "END8",
+        "commission": 9,
+        "commission+1": "EDU7",
+        "promotion": 9,
+        "promotion+1": "SOC8",
+        "reenlist": 6,
+        "autoskills": {
+            "0": "Cutlass",
+            "1": "Revolver"
+        },
+        "ranks": {
+            "0": "Trooper",
+            "1": "Lieutenant",
+            "2": "Captain",
+            "3": "Force Commander",
+            "4": "Lt. Colonel",
+            "5": "Colonel",
+            "6": "Brigadier"
+        },
+        "benefits": [
+            "Low Passage",
+            "INT2",
+            "EDU1",
+            "Blade",
+            "Traveller's Aid",
+            "High Passage",
+            "SOC2"
+        ],
+        "cash": [
+            2000,
+            5000,
+            5000,
+            10000,
+            20000,
+            30000,
+            40000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "Gambling",
+            "Brawling",
+            "Blade Combat"
+        ],
+        "service": [
+            "Vehicle",
+            "Vacc Suit",
+            "Blade Combat",
+            "Gun Combat",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced": [
+            "Vehicle",
+            "Mechanical",
+            "Electronics",
+            "Tactics",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced8": [
+            "Medical",
+            "Tactics",
+            "Tactics",
+            "Computer",
+            "Leader",
+            "Admin"
+        ]
+    },
+    "Army": {
+        "name": "Army",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 5,
+        "enlistment+1": "DEX6",
+        "enlistment+2": "END5",
+        "draft": 3,
+        "survival": 5,
+        "survival+2": "EDU6",
+        "commission": 5,
+        "commission+1": "END7",
+        "promotion": 6,
+        "promotion+1": "EDU7",
+        "reenlist": 7,
+        "autoskills": {
+            "0": "Rifle",
+            "1": "SMG"
+        },
+        "ranks": {
+            "0": "Private",
+            "1": "Lieutenant",
+            "2": "Captain",
+            "3": "Major",
+            "4": "Lt. Colonel",
+            "5": "Colonel",
+            "6": "General"
+        },
+        "benefits": [
+            "Low Passage",
+            "INT1",
+            "EDU2",
+            "Gun",
+            "High Passage",
+            "Mid Passage",
+            "SOC1"
+        ],
+        "cash": [
+            2000,
+            5000,
+            10000,
+            10000,
+            10000,
+            20000,
+            30000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "Gambling",
+            "EDU1",
+            "Brawling"
+        ],
+        "service": [
+            "Vehicle",
+            "Air/Raft",
+            "Gun Combat",
+            "Forward Observer",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced": [
+            "Vehicle",
+            "Mechanical",
+            "Electronics",
+            "Tactics",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced8": [
+            "Medical",
+            "Tactics",
+            "Tactics",
+            "Computer",
+            "Leader",
+            "Admin"
+        ]
+    },
+    "Scouts": {
+        "name": "Scout",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 7,
+        "enlistment+1": "INT6",
+        "enlistment+2": "STR8",
+        "draft": 4,
+        "survival": 7,
+        "survival+2": "END9",
+        "commission": 0,
+        "commission+1": "",
+        "promotion": 0,
+        "promotion+1": "",
+        "reenlist": 3,
+        "autoskills": {
+            "0": "Pilot"
+        },
+        "ranks": {
+            "0": "Explorer",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": ""
+        },
+        "benefits": [
+            "Low Passage",
+            "INT2",
+            "EDU2",
+            "Blade",
+            "Gun",
+            "Scout Ship"
+        ],
+        "cash": [
+            20000,
+            20000,
+            30000,
+            30000,
+            50000,
+            50000,
+            50000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "INT1",
+            "EDU1",
+            "Gun Combat"
+        ],
+        "service": [
+            "Vehicle",
+            "Vacc Suit",
+            "Mechanical",
+            "Navigation",
+            "Electronics",
+            "Jack-o-T"
+        ],
+        "advanced": [
+            "Vehicle",
+            "Mechanical",
+            "Electronics",
+            "Jack-o-T",
+            "Gunnery",
+            "Medical"
+        ],
+        "advanced8": [
+            "Medical",
+            "Navigation",
+            "Engineering",
+            "Computer",
+            "Pilot",
+            "Jack-o-T"
+        ]
+    },
+    "Merchants": {
+        "name": "Merchant",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 7,
+        "enlistment+1": "STR7",
+        "enlistment+2": "INT6",
+        "draft": 5,
+        "survival": 5,
+        "survival+2": "INT7",
+        "commission": 4,
+        "commission+1": "INT6",
+        "promotion": 10,
+        "promotion+1": "INT9",
+        "reenlist": 4,
+        "autoskills": {
+            "4": "Pilot"
+        },
+        "ranks": {
+            "0": "Deck Hand",
+            "1": "4th Officer",
+            "2": "3rd Officer",
+            "3": "2nd Officer",
+            "4": "1st Officer",
+            "5": "Captain",
+            "6": "Captain"
+        },
+        "benefits": [
+            "Low Passage",
+            "INT1",
+            "EDU1",
+            "Gun",
+            "Blade",
+            "Low Passage",
+            "Free Trader"
+        ],
+        "cash": [
+            1000,
+            5000,
+            10000,
+            20000,
+            20000,
+            40000,
+            40000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "STR1",
+            "Blade Combat",
+            "Bribery"
+        ],
+        "service": [
+            "Vehicle",
+            "Vacc Suit",
+            "Jack-o-T",
+            "Steward",
+            "Electronics",
+            "Gun Combat"
+        ],
+        "advanced": [
+            "Streetwise",
+            "Mechanical",
+            "Electronics",
+            "Navigation",
+            "Gunnery",
+            "Medical"
+        ],
+        "advanced8": [
+            "Medical",
+            "Navigation",
+            "Engineering",
+            "Computer",
+            "Pilot",
+            "Admin"
+        ]
+    },
+    "Other": {
+        "name": "Other",
+        "source": "Book1",
+        "species": "Human",
+        "enlistment": 3,
+        "enlistment+1": "",
+        "enlistment+2": "",
+        "draft": 6,
+        "survival": 5,
+        "survival+2": "INT9",
+        "commission": 0,
+        "commission+1": "",
+        "promotion": 0,
+        "promotion+1": "",
+        "reenlist": 5,
+        "autoskills": {},
+        "ranks": {
+            "0": "Citizen",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": ""
+        },
+        "benefits": [
+            "Low Passage",
+            "INT1",
+            "EDU1",
+            "Gun",
+            "High Passage",
+            "",
+            ""
+        ],
+        "cash": [
+            1000,
+            5000,
+            10000,
+            10000,
+            10000,
+            50000,
+            100000
+        ],
+        "personal": [
+            "STR1",
+            "DEX1",
+            "END1",
+            "Blade Combat",
+            "Brawling",
+            "SOC-1"
+        ],
+        "service": [
+            "Vehicle",
+            "Gambling",
+            "Brawling",
+            "Bribery",
+            "Blade Combat",
+            "Gun Combat"
+        ],
+        "advanced": [
+            "Streetwise",
+            "Mechanical",
+            "Electronics",
+            "Gambling",
+            "Brawling",
+            "Forgery"
+        ],
+        "advanced8": [
+            "Medical",
+            "Forgery",
+            "Electronics",
+            "Computer",
+            "Streetwise",
+            "Jack-o-T"
+        ]
+    }}
