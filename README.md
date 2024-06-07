@@ -9,6 +9,7 @@ Version 0.3.1 - June 7th, 2024
 - Fixed a bug where rank can exceed 6, causing a crash.
 - Improved Excel layout.
 - Now number-only columns in the Excel output are outputted in Integers, not Strings.
+- Now rank titles work properly if the character is a noble (high SOC), doctor (Medic 3+ or high EDU), or professor (very high EDU).
 
 Version 0.2 - June 7th, 2024
 - Now generates characters to excel, asks the user for career and number of characters.
