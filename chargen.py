@@ -1,6 +1,6 @@
 #chargen.py
 #classic traveller mass character generator
-#version 0.2 - June 7th, 2024
+#version 0.3.1 - June 7th, 2024
 #by Omer Golan-Joel golan2072@gmail.com
 #open source under the Creative Commons Zero 1.0 License
 
@@ -81,7 +81,10 @@ def promotion (char_data, career, upp, rank):
                 promotion_roll += 1
             if promotion_roll >= int(char_data[career]["promotion"]):
                 rank += 1
-                return rank, True
+                if rank > 6:
+                    return 6, True
+                else:
+                    return rank, True
             else:
                 return rank, False
             
@@ -184,18 +187,6 @@ class Character:
         self.upp_stringer()
         self.inventory_stringer()
         self.char_stringer()
-
-    # def career_choice(self):
-    #     if max(self.upp) == self.upp[0]:
-    #         self.career = "Marines"
-    #     elif max(self.upp) == self.upp[1]:
-    #         self.career = random.choice(["Army", "Scouts"])
-    #     elif max(self.upp) == self.upp[3]:
-    #         self.career = "Merchants"
-    #     elif max(self.upp) == self.upp[4]:
-    #         self.career = "Navy"
-    #     else:
-    #         self.career = random.choice(self.career_list)
 
 
     def add_skill(self, skill):
@@ -344,39 +335,77 @@ class Character:
     
     def rank_stringer(self):
         self.rank_text = self.rank_text = self.char_data[self.career]["ranks"][str(self.rank)]
-        if self.upp[5] == 11 and self.sex == "Male":
-            self.rank_text += " Knight"
-        elif self.upp[5] == 11 and self.sex == "Female":
-            self.rank_text += " Dame"
-        elif self.upp[5] == 12 and self.sex == "Male":
-            self.rank_text += " Baron"
-        elif self.upp[5] == 12 and self.sex == "Female":
-            self.rank_text += " Baroness"
-        elif self.upp[5] == 13 and self.sex == "Male":
-            self.rank_text += " Marquis"
-        elif self.upp[5] == 13 and self.sex == "Female":
-            self.rank_text += " Marquesa"
-        elif self.upp[5] == 14 and self.sex == "Male":
-            self.rank_text += " Count"
-        elif self.upp[5] == 14 and self.sex == "Female":
-            self.rank_text += " Countess"
-        elif self.upp[5] == 15 and self.sex == "Male":
-            self.rank_text += " Duke"
-        elif self.upp[5] == 15 and self.sex == "Female":
-            self.rank_text += " Duchess"
-        if "Medical" in self.skills:
-            if self.skills["Medical"] >= 3:
-               self.rank_text += " Dr."
+        if self.rank > 0:
+            if self.upp[5] == 11 and self.sex == "Male":
+                self.rank_text += " Knight"
+            elif self.upp[5] == 11 and self.sex == "Female":
+                self.rank_text += " Dame"
+            elif self.upp[5] == 12 and self.sex == "Male":
+                self.rank_text += " Baron"
+            elif self.upp[5] == 12 and self.sex == "Female":
+                self.rank_text += " Baroness"
+            elif self.upp[5] == 13 and self.sex == "Male":
+                self.rank_text += " Marquis"
+            elif self.upp[5] == 13 and self.sex == "Female":
+                self.rank_text += " Marquesa"
+            elif self.upp[5] == 14 and self.sex == "Male":
+                self.rank_text += " Count"
+            elif self.upp[5] == 14 and self.sex == "Female":
+                self.rank_text += " Countess"
+            elif self.upp[5] == 15 and self.sex == "Male":
+                self.rank_text += " Duke"
+            elif self.upp[5] == 15 and self.sex == "Female":
+                self.rank_text += " Duchess"
+        if self.rank == 0:
+            if self.upp[5] == 11 and self.sex == "Male":
+                self.rank_text = "Knight"
+            elif self.upp[5] == 11 and self.sex == "Female":
+                self.rank_text = "Dame"
+            elif self.upp[5] == 12 and self.sex == "Male":
+                self.rank_text = "Baron"
+            elif self.upp[5] == 12 and self.sex == "Female":
+                self.rank_text = "Baroness"
+            elif self.upp[5] == 13 and self.sex == "Male":
+                self.rank_text = "Marquis"
+            elif self.upp[5] == 13 and self.sex == "Female":
+                self.rank_text = "Marquesa"
+            elif self.upp[5] == 14 and self.sex == "Male":
+                self.rank_text = "Count"
+            elif self.upp[5] == 14 and self.sex == "Female":
+                self.rank_text = "Countess"
+            elif self.upp[5] == 15 and self.sex == "Male":
+                self.rank_text = "Duke"
+            elif self.upp[5] == 15 and self.sex == "Female":
+                self.rank_text = "Duchess"    
+        if self.rank > 0:
+            if "Medical" in self.skills:
+                if self.skills["Medical"] >= 3:
+                    self.rank_text += " Doctor"
             elif self.upp[4] >= 12 and self.upp[4] < 15:
-                self.rank_text += " Dr."
+                    self.rank_text += " Doctor"
             elif self.upp[4] >= 15:
-                self.rank_text += " Prof."
-        elif self.upp[4] >= 12 and self.upp[4] < 15:
-                self.rank_text += " Dr."
-        elif self.upp[4] >= 15:
-                self.rank_text += " Prof."
-        else:
-            pass
+                    self.rank_text += " Professor"
+            elif self.upp[4] >= 12 and self.upp[4] < 15:
+                    self.rank_text += " Doctor"
+            elif self.upp[4] >= 15:
+                    self.rank_text += " Professor"
+            else:
+                pass
+        elif self. rank == 0:
+            if "Medical" in self.skills:
+                if self.skills["Medical"] >= 3:
+                    self.rank_text = "Doctor"
+            elif self.upp[4] >= 12 and self.upp[4] < 15:
+                    self.rank_text = "Doctor"
+            elif self.upp[4] >= 15:
+                    self.rank_text = "Professor"
+            elif self.upp[4] >= 12 and self.upp[4] < 15:
+                    self.rank_text = " Doctor"
+            elif self.upp[4] >= 15:
+                    self.rank_text = "Professor"
+            else:
+                pass            
+
 
     def upp_stringer(self):
         for digit in self.upp:
@@ -438,6 +467,10 @@ def output_to_excel(filename, character):
         sheet_object["N2"] = "Sex"
         sheet_object["O2"] = "Skills"
         sheet_object["P2"] = "Inventory"
+        sheet_object.column_dimensions['A'].width = 20
+        sheet_object.column_dimensions['C'].width = 20
+        sheet_object.column_dimensions['O'].width = 70
+        sheet_object.column_dimensions['P'].width = 70
     else:
         workbook = openpyxl.load_workbook(full_filename)
     sheet_object = workbook.active
@@ -445,15 +478,15 @@ def output_to_excel(filename, character):
     sheet_object.cell(row=current_row, column=1).value = str(character.name)
     sheet_object.cell(row=current_row, column=2).value = str(character.career)
     sheet_object.cell(row=current_row, column=3).value = str(character.rank_text)
-    sheet_object.cell(row=current_row, column=4).value = str(character.upp[0])
-    sheet_object.cell(row=current_row, column=5).value = str(character.upp[1])
-    sheet_object.cell(row=current_row, column=6).value = str(character.upp[2])
-    sheet_object.cell(row=current_row, column=7).value = str(character.upp[3])
-    sheet_object.cell(row=current_row, column=8).value = str(character.upp[4])
-    sheet_object.cell(row=current_row, column=9).value = str(character.upp[5])
-    sheet_object.cell(row=current_row, column=10).value = str(character.age)
-    sheet_object.cell(row=current_row, column=11).value = str(character.terms)
-    sheet_object.cell(row=current_row, column=12).value = str(character.cash)
+    sheet_object.cell(row=current_row, column=4).value = int(character.upp[0])
+    sheet_object.cell(row=current_row, column=5).value = int(character.upp[1])
+    sheet_object.cell(row=current_row, column=6).value = int(character.upp[2])
+    sheet_object.cell(row=current_row, column=7).value = int(character.upp[3])
+    sheet_object.cell(row=current_row, column=8).value = int(character.upp[4])
+    sheet_object.cell(row=current_row, column=9).value = int(character.upp[5])
+    sheet_object.cell(row=current_row, column=10).value = int(character.age)
+    sheet_object.cell(row=current_row, column=11).value = int(character.terms)
+    sheet_object.cell(row=current_row, column=12).value = int(character.cash)
     sheet_object.cell(row=current_row, column=13).value = str(character.species)
     sheet_object.cell(row=current_row, column=14).value = str(character.sex)
     sheet_object.cell(row=current_row, column=15).value = str(character.skill_string)
@@ -462,21 +495,6 @@ def output_to_excel(filename, character):
 
 
 if __name__ == "__main__":
-    # utility.clear_screen()
-    # career_choice = utility.menu("Choose Your Career", "1. Army", "2. Navy", "3. Scouts", "4. Marines", "5. Merchants", "6. Other")
-    # if career_choice == 1:
-    #     career = "Army"
-    # elif career_choice == 2:
-    #     career = "Navy"
-    # elif career_choice == 3:
-    #     career = "Scouts"
-    # elif career_choice == 4:
-    #     career = "Marines"
-    # elif career_choice == 5:
-    #     career = "Merchants"
-    # elif career_choice == 6:
-    #     career = "Other"  
-    # print("-------------------------------")
     input_loop = True
     while input_loop:
         career = str(input("Please input your career (Army, Navy, Scouts, Marines, Merchants, or Other):"))
